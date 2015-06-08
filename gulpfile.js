@@ -5,6 +5,8 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var deploy = require('./.deploy.json'); // deploy specific secrets
+var rsync = require('rsyncwrapper').rsync;
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
@@ -119,6 +121,25 @@ gulp.task('wiredep', function () {
 
 gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+
+// DEPLOY
+//////////////////////////////////////////////
+gulp.task('deploy', function() {
+  return rsync({
+    ssh: true,
+    src: './dist/',
+    dest: deploy.servers.dev.rsyncDest,
+    recursive: true,
+    syncDest: true,
+    args: ['--verbose'],
+  }, function(error, stdout, stderr, cmd) {
+      console.log(stdout);
+      console.log(stderr);
+      if (error) {
+        console.log(error.message);
+      }
+  });
 });
 
 gulp.task('default', ['clean'], function () {
