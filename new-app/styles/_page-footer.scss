@@ -1,0 +1,21 @@
+.page-footer {
+  $text-color: #555;
+  $hover-color: #aaa;
+  @include clearfix();
+  background-color: $black;
+  color: $text-color;
+  padding-bottom: 4em;
+  p {
+    margin: 0.25em 0;
+  }
+  a {
+    color: $text-color;
+    border-bottom: none;
+    &:hover { color: $hover-color; }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

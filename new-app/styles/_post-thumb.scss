@@ -1,0 +1,45 @@
+.post-thumb {
+  padding: 2em 0;
+  $text-color: $white;
+  color: $text-color;
+  background-color: #f6f6f6;
+
+  h2, ul, li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    margin-left: 1em;
+  }
+  a {
+    color: $text-color;
+  }
+  a:hover {
+    color: mix($black, $text-color, 10%);
+  }
+}
+.post-thumb:nth-of-type(1) {
+  $text-color: $pink;
+  background-color: $pink-light;
+  color: $text-color;
+  a {
+    color: $text-color;
+    &:hover{ color: mix($black, $text-color, 10%);}
+  }
+}
+.post-thumb:nth-of-type(2) {
+  $text-color: $orange;
+  background-color: $orange-light;
+  color: $text-color;
+  a {
+    color: $text-color;
+    &:hover{ color: mix($black, $text-color, 10%);}
+  }
+}
