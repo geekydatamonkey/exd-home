@@ -45,3 +45,13 @@
     &:hover{ color: mix($black, $text-color, 10%);}
   }
 }
+
+.post-thumb:nth-of-type(3) {
+  $text-color: $yellow;
+  background-color: $yellow-light;
+  color: $text-color;
+  a {
+    color: $text-color;
+    &:hover{ color: mix($black, $text-color, 10%);}
+  }
+}
