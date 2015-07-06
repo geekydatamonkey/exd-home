@@ -27,7 +27,13 @@
     color: mix($black, $text-color, 10%);
   }
 }
-.post-thumb:nth-of-type(1) {
+
+.post-thumb.inactive {
+  color: $white;
+  background-color: #f6f6f6;
+}
+
+.post-thumb:nth-of-type(3n+1) {
   $text-color: $pink;
   background-color: $pink-light;
   color: $text-color;
@@ -36,7 +42,7 @@
     &:hover{ color: mix($black, $text-color, 10%);}
   }
 }
-.post-thumb:nth-of-type(2) {
+.post-thumb:nth-of-type(3n+2) {
   $text-color: $orange;
   background-color: $orange-light;
   color: $text-color;
@@ -46,7 +52,7 @@
   }
 }
 
-.post-thumb:nth-of-type(3) {
+.post-thumb:nth-of-type(3n+3) {
   $text-color: $yellow;
   background-color: $yellow-light;
   color: $text-color;
@@ -56,12 +62,12 @@
   }
 }
 
-.post-thumb:nth-of-type(4) {
-  $text-color: $green;
-  background-color: $green-light;
-  color: $text-color;
-  a {
-    color: $text-color;
-    &:hover{ color: mix($black, $text-color, 10%);}
-  }
-}
+// .post-thumb:nth-of-type(4) {
+//   $text-color: $green;
+//   background-color: $green-light;
+//   color: $text-color;
+//   a {
+//     color: $text-color;
+//     &:hover{ color: mix($black, $text-color, 10%);}
+//   }
+//}
