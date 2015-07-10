@@ -13,7 +13,7 @@
     font-size: 2em;
   }
   ul {
-    margin-left: 2.25em;
+    //margin-left: 2.25em;
     padding: 0;
     list-style-type: none;
   }
@@ -62,12 +62,14 @@
   }
 }
 
-// .post-thumb:nth-of-type(4) {
-//   $text-color: $green;
-//   background-color: $green-light;
-//   color: $text-color;
-//   a {
-//     color: $text-color;
-//     &:hover{ color: mix($black, $text-color, 10%);}
-//   }
-//}
+@media (max-device-width: 480px) {
+  .post-thumb {
+    h2 {
+      font-size: 1.5em;
+    }
+    li {
+      margin: 0.5em 0;
+      display: block;
+    }
+  }
+}
