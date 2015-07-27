@@ -1,8 +1,8 @@
 .page-footer {
-  $text-color: #555;
-  $hover-color: #aaa;
+  $text-color: #FFDAC5;
+  $hover-color: #fff;
   @include clearfix();
-  background-color: $black;
+  background-color: #FFA259;
   color: $text-color;
   padding-bottom: 4em;
   p {

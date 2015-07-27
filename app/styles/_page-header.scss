@@ -1,7 +1,8 @@
 // Header
 .page-header {
   padding: 3em 0;
-  color: $blue-dark;
+  color: $white;
+  background: #FF758E;
 }
 h1 {
   font-size: 4em;
@@ -11,7 +12,7 @@ h1 {
 .author {
   font-size: 2em;
   margin: 0;
-  color: $gray;
+  color: #FFE4E4;
 }
 
 @media (max-device-width: 480px) {
