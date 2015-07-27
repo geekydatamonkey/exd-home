@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "Fira": "*"
   }
 }
